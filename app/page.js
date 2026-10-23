@@ -265,66 +265,43 @@ export default function Home() {
 
         <div className="owner-card">
           <div className="owner-profile">
-            <div className="owner-avatar-wrap">
-              <img
-                src="/owner-avatar.png"
-                alt="Zenvyx owner avatar"
-                className="owner-avatar"
-                onError={(event) => {
-                  event.currentTarget.style.display = "none";
-                  event.currentTarget.nextElementSibling.style.display = "grid";
-                }}
-              />
-              <div className="owner-avatar-fallback">U</div>
-              <span className="owner-avatar-glow" />
+            <div className="owner-avatar-fallback" aria-label="Umbryx avatar">
+              U
             </div>
 
             <div className="owner-details">
-              <span className="owner-label">BOT OWNER & DEVELOPER</span>
+              <span className="owner-role">BOT OWNER &amp; DEVELOPER</span>
               <h3>Umbryx</h3>
-              <p>Creator of Zenvyx</p>
-              <span className="owner-discord">
-                <span className="discord-dot" /> umbryx.gg
-              </span>
+              <p className="owner-title">Creator of Zenvyx</p>
+              <span className="owner-username">umbryx.gg</span>
             </div>
           </div>
 
-          <div className="owner-divider" />
-
-          <div className="owner-contacts">
+          <div className="owner-links" aria-label="Contact the owner">
             <a
-              className="owner-contact"
               href="https://discord.com/users/1245649269705150464"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
-              <span className="contact-icon discord-icon">
-                <MessageCircle size={21} />
-              </span>
-              <span className="contact-text">
-                <small>CONTACT ON DISCORD</small>
-                <strong>umbryx.gg</strong>
-              </span>
-              <ArrowUpRight size={18} />
+              <MessageCircle size={20} aria-hidden="true" />
+              <span>Contact on Discord — umbryx.gg</span>
+              <ArrowUpRight size={17} aria-hidden="true" />
             </a>
 
-            <a
-              className="owner-contact"
-              href="mailto:umbryxxd@gmail.com"
-            >
-              <span className="contact-icon"><Mail size={21} /></span>
-              <span className="contact-text">
-                <small>EMAIL THE OWNER</small>
-                <strong>umbryxxd@gmail.com</strong>
-              </span>
-              <ArrowUpRight size={18} />
+            <a href="mailto:umbryxxd@gmail.com">
+              <Mail size={20} aria-hidden="true" />
+              <span>Email — umbryxxd@gmail.com</span>
+              <ArrowUpRight size={17} aria-hidden="true" />
             </a>
           </div>
 
-          <p className="owner-footnote">
-            For privacy questions, support, and suggestions,
-            reach out using either contact method.
-          </p>
+          <div className="owner-description">
+            <h3>Need help or have a privacy question?</h3>
+            <p>
+              For privacy questions, support, and suggestions, reach out
+              using either contact method. We’ll do our best to help.
+            </p>
+          </div>
         </div>
       </section>
 
