@@ -1,4 +1,4 @@
-import ownerAvatar from "./owner-avatar.png";
+
 "use client";
 
 import { useEffect, useState } from "react";
@@ -265,11 +265,13 @@ export default function Home() {
 
         <div className="owner-card">
           <div className="owner-profile">
-               <img
-                   src={ownerAvatar.src}
-                   alt="Umbryx avatar"
-                   className="owner-avatar"
-                />
+              <div className="owner-avatar-wrap">
+                  <img
+                       src="/app/owner-avatar.png"
+                       alt="Umbryx avatar"
+                       className="owner-avatar"
+                   />
+              </div>
             <div className="owner-details">
               <span className="owner-role">BOT OWNER &amp; DEVELOPER</span>
               <h3>Umbryx</h3>
